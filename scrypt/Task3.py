@@ -80,13 +80,13 @@ def find_codes_and_prefixes_called_from_bangalore(calls):
 
 
 codes, prefixes = find_codes_and_prefixes_called_from_bangalore(calls)
+sorted_codes = sorted(codes)
+sorted_prefixes = sorted(prefixes)
 
 print("The numbers called by people in Bangalore have codes:")
-for code in codes:
-    print(code)
+print(sorted_codes)
 print("The numbers called by people in Bangalore have prefixes:")
-for prefix in prefixes:
-    print(prefix)
+print(sorted_prefixes)
 
 """
 Part B
@@ -117,4 +117,4 @@ def calc_percentage(calls):
 
 
 print("{} percent of calls from fixed lines in Bangalore are calls to other fixed lines "
-      "in Bangalore.".format(calc_percentage(calls)))
+      "in Bangalore.".format(round(calc_percentage(calls) * 100)))

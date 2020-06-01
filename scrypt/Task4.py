@@ -44,5 +44,6 @@ def find_telemarketers(texts, calls):
 
 
 print("These numbers could be telemarketers: ")
-for telemarketer in find_telemarketers(texts, calls):
-    print(telemarketer)
+telemarketers = find_telemarketers(texts, calls)
+telemarketers.sort()
+print(telemarketers)

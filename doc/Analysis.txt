@@ -12,13 +12,13 @@ Time complexity: O(12n + 5) ~ O(n)
 Task 2:
 Input: calls
 Output: busiest telephone number
-Time complexity: O(nlog(n) + 7n + 6) ~ O(nlog(n))
+Time complexity: O(10n + 9) ~ O(n)
 
 Task3:
 Part A:
 Input: calls
 Output: Area codes and prefixes of required number
-Time complexity: O(6n + 3) ~ O(n)
+Time complexity: O(2nlog(n) + 6n + 3) ~ O(nlog(n))
 Part B:
 Input calls
 Output: Required percent
@@ -27,4 +27,4 @@ Time complexity: O(6n + 4) ~ O(n)
 Task4:
 Input: texts, calls
 Output: Telemarketers
-Time complexity: O(4n + 5) ~ O(n)
+Time complexity: O(nlog(n) + 4n + 5) ~ O(nlog(n))

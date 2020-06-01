@@ -41,9 +41,17 @@ def calc_busiest_telephone_number(calls):
         telephone_number_time[record[0]] += int(record[3])
         telephone_number_time[record[1]] += int(record[3])
 
-    return sorted(telephone_number_time.items(), key=lambda kv: kv[1], reverse=True)
+    busiest_telephone_number = str()
+    busiest_telephone_number_time = 0
+
+    for telephone_number, time in telephone_number_time.items():
+        if busiest_telephone_number_time < time:
+            busiest_telephone_number = telephone_number
+            busiest_telephone_number_time = time
+
+    return busiest_telephone_number, busiest_telephone_number_time
 
 
+busiest_telephone_number, busiest_telephone_number_time = calc_busiest_telephone_number(calls)
 print("{} spent the longest time, {} seconds, on the phone during September 2016."
-      .format(calc_busiest_telephone_number(calls)[0][0],
-              calc_busiest_telephone_number(calls)[0][1]))
+      .format(busiest_telephone_number, busiest_telephone_number_time))
